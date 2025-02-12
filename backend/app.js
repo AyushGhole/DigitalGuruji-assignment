@@ -34,9 +34,7 @@ app.post("/generate", async (req, res) => {
   if (!title) return res.status(400).json({ error: "Title is required" });
 
   // Generatsve API Key Calling
-  const genAI = new GoogleGenerativeAI(
-    "AIzaSyA7zD717IocTRpw4QeuOy10IeAxYzhhYhg"
-  );
+  const genAI = new GoogleGenerativeAI(`${process.env.API_KEY}`);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const prompt = `Provide me the article on ${title} in short and effective in a para.`;
 
@@ -58,9 +56,7 @@ app.post("/optimize", async (req, res) => {
   if (!articleInfo) return res.status(404).json({ error: "Article not found" });
 
   // Generattive API Key Calling
-  const genAI = new GoogleGenerativeAI(
-    "AIzaSyA7zD717IocTRpw4QeuOy10IeAxYzhhYhg"
-  );
+  const genAI = new GoogleGenerativeAI(`${process.env.API_KEY}`);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const prompt = `Provide me the article on ${articleInfo.title} in short and effective in a para.`;
 
