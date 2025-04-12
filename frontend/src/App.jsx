@@ -32,7 +32,7 @@ export default function ArticleWriter() {
     setContent("");
 
     try {
-      const response = await fetch("http://localhost:5000/generate", {
+      const response = await fetch("https://articlegenerators.onrender.com/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export default function ArticleWriter() {
 
     setOptimizing(true);
     try {
-      const response = await fetch("http://localhost:5000/optimize", {
+      const response = await fetch("https://articlegenerators.onrender.com/optimize", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +95,7 @@ export default function ArticleWriter() {
         transition={{ duration: 0.5 }}
         className="max-w-2xl w-full bg-white p-8 rounded-3xl shadow-2xl">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-          ✨ AI TextEditor ✨
+          ✨Intelligent AI Article Generator ✨
         </h2>
         <input
           type="text"
