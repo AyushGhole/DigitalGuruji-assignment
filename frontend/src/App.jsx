@@ -95,7 +95,7 @@ export default function ArticleWriter() {
         transition={{ duration: 0.5 }}
         className="max-w-2xl w-full bg-white p-8 rounded-3xl shadow-2xl">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-          ✨Intelligent AI Article Generator ✨
+          ✨Intelligent AI Assignment Generator ✨
         </h2>
         <input
           type="text"
